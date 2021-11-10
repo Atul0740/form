@@ -9,6 +9,12 @@
     padding: 20px 0px;
 }
 
+p {
+    color: white;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
 .form {
     width: 500px;
     height: 600px;
@@ -95,4 +101,7 @@
     background: #ffca12;
     border-radius: 10px;
     box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bolder;
 }
