@@ -4,13 +4,14 @@
     min-width: 100vw;
     justify-content: center;
     align-items: center;
-    background: url('./Untitled\ design.png');
+    background: url('./bg.png');
     background-size: cover;
+    background-repeat: no-repeat;
     padding: 20px 0px;
 }
 
 p {
-    color: white;
+    color: black;
     font-weight: bolder;
     text-transform: capitalize;
 }
@@ -24,6 +25,11 @@ p {
     align-items: center;
     flex-direction: column;
     padding-top: 50px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
 }
 
 .radio-toolbar {
@@ -47,11 +53,13 @@ p {
     border: 2px solid #ffca12;
     border-radius: 4px;
     margin: 0px 5px;
-    width: 100px;
+    width: 130px;
     cursor: pointer;
-    box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
 }
 
 .radio-toolbar label:hover {
@@ -100,8 +108,28 @@ p {
     margin-top: 30px;
     background: #ffca12;
     border-radius: 10px;
-    box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    border-color: #ffca12;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bolder;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffca12;
+}
+
+@media(max-width:760px) {
+    .radio-toolbar label {
+        width: 24vw;
+        font-size: 10px;
+    }
+    .form {
+        width: 98vw;
+    }
 }

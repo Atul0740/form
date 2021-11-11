@@ -266,13 +266,13 @@ function App() {
     control: (base, state) => ({
       ...base,
       background: "#ffca12",
-      color:"#fff",
+      color: "#fff",
       boxShadow: "8px 8px 5px 0px rgba(0, 0, 0, 0.75)",
       borderRadius: "3px"
     }),
     menu: base => ({
       ...base,
-      background:"#ffca12",
+      background: "#ffca12",
       borderRadius: 0,
       marginTop: 0,
     }),
@@ -283,24 +283,24 @@ function App() {
   };
 
   const handleAcademic = (e) => {
-      setAcad(e.target.value)
+    setAcad(e.target.value)
   }
 
   useEffect(() => {
-    if(acad==='school'){
-      document.getElementById('school-menu').style.display='flex';
-      document.getElementById('ug-menu').style.display='none';
-      document.getElementById('grad-menu').style.display='none';
+    if (acad === 'school') {
+      document.getElementById('school-menu').style.display = 'flex';
+      document.getElementById('ug-menu').style.display = 'none';
+      document.getElementById('grad-menu').style.display = 'none';
     }
-    if(acad==='graduate'){
-      document.getElementById('school-menu').style.display='none';
-      document.getElementById('ug-menu').style.display='none';
-      document.getElementById('grad-menu').style.display='flex';
+    if (acad === 'graduate') {
+      document.getElementById('school-menu').style.display = 'none';
+      document.getElementById('ug-menu').style.display = 'none';
+      document.getElementById('grad-menu').style.display = 'flex';
     }
-    if(acad==='undergraduate'){
-      document.getElementById('school-menu').style.display='none';
-      document.getElementById('ug-menu').style.display='flex';
-      document.getElementById('grad-menu').style.display='none';
+    if (acad === 'undergraduate') {
+      document.getElementById('school-menu').style.display = 'none';
+      document.getElementById('ug-menu').style.display = 'flex';
+      document.getElementById('grad-menu').style.display = 'none';
     }
   }, [acad])
 
@@ -313,24 +313,23 @@ function App() {
   }
 
   useEffect(() => {
-    if(classes==='11th' || classes==='12th'){
-      document.getElementById('stream-menu').style.display='block'
+    if (classes === '11th' || classes === '12th') {
+      document.getElementById('stream-menu').style.display = 'block'
     }
-    else{
-      document.getElementById('stream-menu').style.display='none'
+    else {
+      document.getElementById('stream-menu').style.display = 'none'
     }
   }, [classes])
 
   return (
     <div className="App">
-
       <form className='form'>
 
         <p>Please select your academics</p>
 
         <div className="radio-toolbar">
 
-          <input type="radio" id="graduate" name="academics" value="graduate" onChange={handleAcademic}/>
+          <input type="radio" id="graduate" name="academics" value="graduate" onChange={handleAcademic} />
           <label htmlFor="graduate">Graduate</label>
 
           <input type="radio" id="undergraduate" name="academics" value="undergraduate" onChange={handleAcademic} />
@@ -354,14 +353,14 @@ function App() {
           </div>
           <div >
             <p>Please Select School Completion Year</p>
-            <Select options={options2} className='select-this' styles={customStyles}/>
+            <Select options={options2} className='select-this' styles={customStyles} />
           </div>
         </div>
 
         <div className="undergraduate-menu menu" id='ug-menu'>
           <div>
             <p>Please Select Your Course</p>
-            <Select options={options7} className='select' styles={customStyles}/>
+            <Select options={options7} className='select' styles={customStyles} />
           </div>
           <div>
             <p>Please Select Your Course Duration</p>
@@ -384,11 +383,11 @@ function App() {
           </div>
           <div>
             <p>Please Select Your Course Duration</p>
-            <Select options={options4} className='select' styles={customStyles}/>
+            <Select options={options4} className='select' styles={customStyles} />
           </div>
           <div>
             <p>Please Select Your Course Completion Year</p>
-            <Select options={options8} className='select-this'styles={customStyles}  />
+            <Select options={options8} className='select-this' styles={customStyles} />
           </div>
         </div>
         <button className='btn'>Continue</button>
