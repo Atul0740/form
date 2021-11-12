@@ -265,20 +265,20 @@ function App() {
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      background: "#ffca12",
       color: "#fff",
-      boxShadow: "8px 8px 5px 0px rgba(0, 0, 0, 0.75)",
+      background: "rgba( 255, 255, 255, 0.25)",
+      boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37)",
       borderRadius: "3px"
     }),
     menu: base => ({
       ...base,
-      background: "#ffca12",
-      borderRadius: 0,
+      borderRadius: "10px",
       marginTop: 0,
     }),
     menuList: base => ({
       ...base,
-      padding: 0
+      padding: 0,
+      borderRadius: "10px",
     })
   };
 
