@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px 0px;
-    background: linear-gradient(90deg, #1a71ff, #6ca4e9);
+    background: #eeeeee;
 }
 
 p {
@@ -22,11 +22,10 @@ p {
     align-items: center;
     flex-direction: column;
     padding-top: 50px;
-    background: rgba( 255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    background: #eeeeee;
+    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
-    border-radius: 10px;
 }
 
 .radio-toolbar {
@@ -46,36 +45,30 @@ p {
     padding: 5px 10px;
     font-family: sans-serif, Arial;
     font-size: 12px;
-    border: 2px solid #ffca12;
     border-radius: 4px;
     margin: 0px 5px;
     width: 130px;
     cursor: pointer;
-    background: rgba( 255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    background: #eeeeee;
+    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
-    border-radius: 10px;
 }
 
 .radio-toolbar label:hover {
-    background-color: #ffca12;
-}
-
-.radio-toolbar input[type="radio"]:focus+label {
-    border: 2px solid #ffca12;
+    background: #eeeeee;
+    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-    background-color: #ffca12;
-    border-color: #ffca12;
-    box-shadow: inset 20px 20px 60px #d9ac0f, inset -20px -20px 60px #ffe815;
+    background: #eeeeee;
+    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
     font-weight: bolder;
 }
 
 .select {
     width: 200px;
-    background: #6ca4e9;
+    background: #fff;
     margin-bottom: 20px;
 }
 
@@ -102,9 +95,7 @@ p {
     padding: 12px 20px;
     margin-top: 30px;
     border-radius: 10px;
-    border-color: #ffca12;
-    background: rgba( 255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
     border-radius: 10px;
@@ -112,10 +103,12 @@ p {
     letter-spacing: 1px;
     font-weight: bolder;
     cursor: pointer;
+    border: none;
 }
 
 .btn:hover {
-    background-color: #ffca12;
+    background: #eeeeee;
+    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
 }
 
 @media(max-width:760px) {
