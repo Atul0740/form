@@ -14,6 +14,11 @@ p {
     text-transform: capitalize;
 }
 
+.title {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
 .form {
     width: 500px;
     height: 600px;
@@ -24,8 +29,6 @@ p {
     padding-top: 50px;
     background: #eeeeee;
     box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
-    backdrop-filter: blur( 4px);
-    -webkit-backdrop-filter: blur( 4px);
 }
 
 .radio-toolbar {
@@ -45,14 +48,12 @@ p {
     padding: 5px 10px;
     font-family: sans-serif, Arial;
     font-size: 12px;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: 0px 5px;
     width: 130px;
     cursor: pointer;
     background: #eeeeee;
     box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
-    backdrop-filter: blur( 4px);
-    -webkit-backdrop-filter: blur( 4px);
 }
 
 .radio-toolbar label:hover {
@@ -105,8 +106,6 @@ p {
     margin-top: 30px;
     border-radius: 10px;
     box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
-    backdrop-filter: blur( 4px);
-    -webkit-backdrop-filter: blur( 4px);
     border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;

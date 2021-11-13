@@ -325,7 +325,7 @@ function App() {
     <div className="App">
       <form className='form'>
 
-        <p>Please select your academics</p>
+        <p className='title'>Please select your academics</p>
 
         <div className="radio-toolbar">
 
