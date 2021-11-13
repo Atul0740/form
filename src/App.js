@@ -268,7 +268,7 @@ function App() {
       color: "#fff",
       background: "rgba( 255, 255, 255, 0.25)",
       boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37)",
-      borderRadius: "3px"
+      borderRadius: "10px"
     }),
     menu: base => ({
       ...base,
