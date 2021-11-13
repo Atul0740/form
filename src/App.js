@@ -266,8 +266,8 @@ function App() {
     control: (base, state) => ({
       ...base,
       color: "#fff",
-      background: "rgba( 255, 255, 255, 0.25)",
-      boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37)",
+      background: "#eee",
+      boxShadow: "1px 2px 4px #999, -1px -2px 5px #fff",
       borderRadius: "10px"
     }),
     menu: base => ({

@@ -15,7 +15,7 @@ p {
 }
 
 .title {
-    font-size: x-large;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -28,7 +28,7 @@ p {
     flex-direction: column;
     padding-top: 50px;
     background: #eeeeee;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
 }
 
 .radio-toolbar {
@@ -53,17 +53,17 @@ p {
     width: 130px;
     cursor: pointer;
     background: #eeeeee;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
 }
 
 .radio-toolbar label:hover {
     background: #eeeeee;
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
     background: #eeeeee;
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
     font-weight: bolder;
 }
 
@@ -72,14 +72,18 @@ p {
     background: #fff;
     margin-bottom: 20px;
     border-radius: 10px;
+    outline: none !important;
+    text-decoration: none !important;
 }
 
 .select:hover {
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
 }
 
 .select:focus {
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
+    outline: none !important;
+    text-decoration: none !important;
 }
 
 .menu {
@@ -105,7 +109,7 @@ p {
     padding: 12px 20px;
     margin-top: 30px;
     border-radius: 10px;
-    box-shadow: 5px 5px 20px #838383, -5px -5px 20px #ffffff;
+    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
     border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -116,7 +120,7 @@ p {
 
 .btn:hover {
     background: #eeeeee;
-    box-shadow: inset 5px 5px 20px #c8c8c8, inset -5px -5px 20px #ffffff;
+    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
 }
 
 @media(max-width:760px) {
@@ -127,6 +131,7 @@ p {
     .form {
         width: 100vw;
         height: 100vh;
+        border-radius: 0;
     }
     .App {
         padding: 0;
