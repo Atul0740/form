@@ -4,6 +4,10 @@ import Select from 'react-select'
 
 const options1 = [
   {
+    label: 'Other',
+    value: '0th'
+  },
+  {
     label: '1st',
     value: '1st',
   },
@@ -54,6 +58,10 @@ const options1 = [
 ];
 
 const options2 = [
+  {
+    label: 'Other',
+    value: '0th'
+  },
   {
     label: '2021',
     value: '2021',
@@ -110,6 +118,10 @@ const options2 = [
 
 const options3 = [
   {
+    label: 'Other',
+    value: '0th'
+  },
+  {
     label: 'Science',
     value: 'Science',
   },
@@ -124,6 +136,10 @@ const options3 = [
 ];
 
 const options4 = [
+  {
+    label: 'Other',
+    value: '0th'
+  },
   {
     label: '1yr',
     value: '1yr',
@@ -148,6 +164,10 @@ const options4 = [
 
 const options5 = [
   {
+    label: 'Other',
+    value: '0th'
+  },
+  {
     label: '1st year',
     value: '1st year',
   },
@@ -170,6 +190,10 @@ const options5 = [
 ];
 
 const options6 = [
+  {
+    label: 'Other',
+    value: '0th'
+  },
   {
     label: '2021',
     value: '2021',
@@ -198,6 +222,10 @@ const options6 = [
 
 const options7 = [
   {
+    label: 'Other',
+    value: '0th'
+  },
+  {
     label: 'B.A.',
     value: 'B.A.',
   },
@@ -225,36 +253,28 @@ const options7 = [
 
 const options8 = [
   {
-    label: '2021',
-    value: '2021',
+    label: 'Other',
+    value: '0th'
   },
   {
-    label: '2020',
-    value: '2020',
+    label: 'M.A.',
+    value: 'M.A.',
   },
   {
-    label: '2019',
-    value: '2019',
+    label: 'M.Com.',
+    value: 'M.Com.',
   },
   {
-    label: '2018',
-    value: '2018',
+    label: 'M.Sc.',
+    value: 'M.Sc.',
   },
   {
-    label: '2017',
-    value: '2017',
+    label: 'M.Tech.',
+    value: 'M.Tech',
   },
   {
-    label: '2016',
-    value: '2016',
-  },
-  {
-    label: '2015',
-    value: '2015',
-  },
-  {
-    label: '2014',
-    value: '2014',
+    label: 'MBA',
+    value: 'MBA',
   }
 ];
 
@@ -267,7 +287,7 @@ function App() {
       ...base,
       color: "#fff",
       background: "#eee",
-      boxShadow: "1px 2px 4px #999, -1px -2px 5px #fff",
+      // boxShadow: "1px 2px 4px #999, -1px -2px 5px #fff",
       borderRadius: "10px"
     }),
     menu: base => ({
@@ -323,26 +343,28 @@ function App() {
 
   return (
     <div className="App">
-      <form className='form'>
+      <form className='form' data-aos='zoom-in'>
 
         <p className='title'>Please select your academics</p>
 
-        <div className="radio-toolbar">
-
-          <input type="radio" id="graduate" name="academics" value="graduate" onChange={handleAcademic} />
-          <label htmlFor="graduate">Graduate</label>
-
-          <input type="radio" id="undergraduate" name="academics" value="undergraduate" onChange={handleAcademic} />
-          <label htmlFor="undergraduate">Undergraduate</label>
+        <div className="radio-toolbar" data-aos='fade-right' data-aos-delay='500'>
 
           <input type="radio" id="school" name="academics" value="school" onChange={handleAcademic} />
           <label htmlFor="school">School</label>
+
+
+          <input type="radio" id="undergraduate" name="academics" value="undergraduate" onChange={handleAcademic} />
+          <label htmlFor="undergraduate">Graduate</label>
+
+
+          <input type="radio" id="graduate" name="academics" value="graduate" onChange={handleAcademic} />
+          <label htmlFor="graduate">Post-graduate</label>
 
         </div>
 
         <div className="school-menu menu" id='school-menu'>
 
-          <div >
+          <div>
             <p>Please Select Your Class</p>
             <Select options={options1} className='select' onChange={handleClass} styles={customStyles} />
           </div>
@@ -353,7 +375,7 @@ function App() {
           </div>
           <div >
             <p>Please Select School Completion Year</p>
-            <Select options={options2} className='select-this' styles={customStyles} />
+            <Select options={options2} className='select' styles={customStyles} />
           </div>
         </div>
 
@@ -372,22 +394,26 @@ function App() {
           </div>
           <div>
             <p>Please Select Your Course Completion Year</p>
-            <Select options={options6} className='select-this' styles={customStyles} />
+            <Select options={options6} className='select' styles={customStyles} />
           </div>
         </div>
 
         <div className="graduate-menu menu" id='grad-menu'>
           <div>
             <p>Please Select Your Course</p>
-            <Select options={options7} className='select' styles={customStyles} />
+            <Select options={options8} className='select' styles={customStyles} />
           </div>
           <div>
             <p>Please Select Your Course Duration</p>
             <Select options={options4} className='select' styles={customStyles} />
           </div>
           <div>
+            <p>Please Select Your Current Year</p>
+            <Select options={options5} className='select' styles={customStyles} />
+          </div>
+          <div>
             <p>Please Select Your Course Completion Year</p>
-            <Select options={options8} className='select-this' styles={customStyles} />
+            <Select options={options6} className='select' styles={customStyles} />
           </div>
         </div>
         <button className='btn'>Continue</button>

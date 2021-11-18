@@ -6,10 +6,13 @@
     align-items: center;
     padding: 20px 0px;
     background: #eeeeee;
+    background-image: url(./bg1.png);
+    background-size: cover;
+    position: relative;
 }
 
 p {
-    color: black;
+    color: #fff;
     font-weight: bolder;
     text-transform: capitalize;
 }
@@ -21,14 +24,16 @@ p {
 
 .form {
     width: 500px;
-    height: 600px;
+    /* height: 600px; */
     border-radius: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 50px;
-    background: #eeeeee;
-    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
+    padding: 50px 0px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    /* position: absolute;
+    right: 10vw; */
 }
 
 .radio-toolbar {
@@ -52,23 +57,24 @@ p {
     margin: 0px 5px;
     width: 130px;
     cursor: pointer;
-    background: #eeeeee;
-    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
+    background: #0063ff;
+    color: #fff;
+    /* box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff; */
 }
 
 .radio-toolbar label:hover {
-    background: #eeeeee;
-    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
+    /* box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff; */
+    transform: scale(110%);
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-    background: #eeeeee;
-    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
+    /* box-shadow: inset 1px 2px 4px #0063ff, inset -1px -2px 5px #0063ff; */
     font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .select {
-    width: 200px;
+    width: 350px;
     background: #fff;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -76,12 +82,8 @@ p {
     text-decoration: none !important;
 }
 
-.select:hover {
-    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
-}
-
 .select:focus {
-    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
+    /* box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff; */
     outline: none !important;
     text-decoration: none !important;
 }
@@ -109,18 +111,19 @@ p {
     padding: 12px 20px;
     margin-top: 30px;
     border-radius: 10px;
-    box-shadow: 1px 2px 4px #999, -1px -2px 5px #fff;
     border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bolder;
     cursor: pointer;
     border: none;
+    background-color: #0063ff;
+    color: white;
 }
 
 .btn:hover {
-    background: #eeeeee;
-    box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff;
+    transform: translateY(-20%);
+    transition: all 0.3s ease;
 }
 
 @media(max-width:760px) {
