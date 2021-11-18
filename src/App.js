@@ -227,19 +227,19 @@ const options7 = [
   },
   {
     label: 'B.A.',
-    value: 'B.A.',
+    value: 'BA',
   },
   {
     label: 'B.Com.',
-    value: 'B.Com.',
+    value: 'BCom',
   },
   {
     label: 'B.Sc.',
-    value: 'B.Sc.',
+    value: 'BSc',
   },
   {
     label: 'B.Tech.',
-    value: 'B.Tech',
+    value: 'BTech',
   },
   {
     label: 'LLB',
@@ -258,19 +258,19 @@ const options8 = [
   },
   {
     label: 'M.A.',
-    value: 'M.A.',
+    value: 'MA',
   },
   {
     label: 'M.Com.',
-    value: 'M.Com.',
+    value: 'MCom',
   },
   {
     label: 'M.Sc.',
-    value: 'M.Sc.',
+    value: 'MSc',
   },
   {
     label: 'M.Tech.',
-    value: 'M.Tech',
+    value: 'MTech',
   },
   {
     label: 'MBA',
