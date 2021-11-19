@@ -170,7 +170,7 @@ const School = () => {
         }
       }, [classes])    
     return (
-        <div className="school-menu menu" id='school-menu' data-aos='fade-up'>
+        <div className="school-menu menu" id='school-menu' data-aos='zoom-in'>
 
           <div>
             <p>Please Select Your Class</p>

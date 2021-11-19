@@ -128,7 +128,8 @@ p {
     }
     .App {
         padding: 0;
-        max-height: 100vh;
+        height: 100vh;
+        min-height: auto;
         align-items: flex-start;
         padding-top: 10px;
     }

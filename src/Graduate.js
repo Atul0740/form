@@ -136,7 +136,7 @@ const Graduate = () => {
         })
       };
     return (
-        <div className="undergraduate-menu menu" id='ug-menu' data-aos='fade-up'>
+        <div className="undergraduate-menu menu" id='ug-menu' data-aos='zoom-in'>
           <div>
             <p>Please Select Your Course</p>
             <Select options={options7} className='select' styles={customStyles} />
