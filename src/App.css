@@ -132,7 +132,6 @@ p {
         min-height: auto;
         align-items: flex-start;
         padding-top: 10px;
-        overflow-y: hidden;
     }
     .select {
         width: 320px;
