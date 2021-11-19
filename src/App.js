@@ -52,9 +52,6 @@ function App() {
         {underGraduate && <Graduate/>}
         {postGraduate && <PostGraduate/>}
         </div>
-
-        
-        <button className='btn' data-aos='flip-right' data-aos-delay='700'>Continue</button>
       </form>
     </div>
   );

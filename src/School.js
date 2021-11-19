@@ -139,7 +139,6 @@ const School = () => {
           ...base,
           color: "#fff",
           background: "#eee",
-          // boxShadow: "1px 2px 4px #999, -1px -2px 5px #fff",
           borderRadius: "10px"
         }),
         menu: base => ({
@@ -186,6 +185,7 @@ const School = () => {
             <p>Please Select School Completion Year</p>
             <Select options={options2} className='select' styles={customStyles} />
           </div>
+          <button className='btn' data-aos='flip-right' data-aos-delay='100'>Continue</button>
         </div>
     )
 }

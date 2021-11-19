@@ -13,7 +13,6 @@
 
 p {
     color: #fff;
-    font-weight: bolder;
     text-transform: capitalize;
 }
 
@@ -24,7 +23,6 @@ p {
 
 .form {
     width: 500px;
-    /* height: 600px; */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -32,8 +30,6 @@ p {
     padding: 50px 0px;
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
-    /* position: absolute;
-    right: 10vw; */
 }
 
 .radio-toolbar {
@@ -59,11 +55,11 @@ p {
     cursor: pointer;
     background: #0063ff;
     color: #fff;
-    box-shadow: 1px 2px 4px #002866;
+    box-shadow: 1px 1px 4px #002866;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-    box-shadow: inset 1px 2px 4px #002866;
+    box-shadow: inset 1px 0.5px 4px #002866;
     font-weight: bolder;
 }
 
@@ -77,19 +73,18 @@ p {
 }
 
 .select:focus {
-    /* box-shadow: inset 1px 2px 4px #999, inset -1px -2px 5px #fff; */
     outline: none !important;
     text-decoration: none !important;
 }
 
 .menu {
-    /* display: none; */
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 50px;
+    display: flex;
 }
 
 .menu p {
@@ -113,7 +108,7 @@ p {
     border: none;
     background-color: #0063ff;
     color: white;
-    box-shadow: 1px 2px 4px #002866;
+    box-shadow: 1px 1px 4px #002866;
 }
 
 .btn:hover {
@@ -128,14 +123,8 @@ p {
     }
     .form {
         width: 100vw;
-        height: 100vh;
         border-radius: 0;
-        padding-bottom: 0px;
-        position: relative;
-    }
-    .btn {
-        position: absolute;
-        bottom: 80px;
+        padding-bottom: 10px;
     }
     .App {
         padding: 0;

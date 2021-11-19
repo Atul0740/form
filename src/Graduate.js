@@ -122,7 +122,6 @@ const Graduate = () => {
           ...base,
           color: "#fff",
           background: "#eee",
-          // boxShadow: "1px 2px 4px #999, -1px -2px 5px #fff",
           borderRadius: "10px"
         }),
         menu: base => ({
@@ -154,6 +153,7 @@ const Graduate = () => {
             <p>Please Select Your Course Completion Year</p>
             <Select options={options6} className='select' styles={customStyles} />
           </div>
+          <button className='btn'>Continue</button>
         </div>
     )
 }
