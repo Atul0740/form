@@ -123,6 +123,7 @@ p {
     }
     .form {
         width: 100vw;
+        height: 100vh;
         border-radius: 0;
         padding: 20px 0px;
     }
@@ -131,7 +132,6 @@ p {
         height: 100vh;
         min-height: auto;
         align-items: flex-start;
-        padding-top: 10px;
     }
     .select {
         width: 320px;
