@@ -129,6 +129,8 @@ p {
     .App {
         padding: 0;
         max-height: 100vh;
+        align-items: flex-start;
+        padding-top: 10px;
     }
     .select {
         width: 320px;
