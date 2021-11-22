@@ -228,21 +228,21 @@ const School = () => {
           <div>
             <p>Please Select Your Class</p>
             <Select options={options1} className='select' onChange={handleClass} theme={customTheme} styles={customStyles} />
-            <input type="text" placeholder='Please type your Class...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input1'/>
-            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='classErr'>{classErr}</div>
+            <input type="text" placeholder='Please type your Class...' className='input' id='input1'/>
+            <div className='error' id='classErr'>{classErr}</div>
           </div>
 
           <div id='stream-menu'>
             <p>Please Select Your Stream</p>
             <Select options={options3} className='select' onChange={handleStream} theme={customTheme} styles={customStyles}/>
-            <input type="text" placeholder='Please type your Stream...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input3'/>
+            <input type="text" placeholder='Please type your Stream...' className='input' id='input3'/>
           </div>
 
           <div >
             <p>Please Select School Completion Year</p>
             <Select options={options2} className='select' onChange={handleCompletion} theme={customTheme} styles={customStyles} />
-            <input type="text" placeholder='Please type your Completion Year...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input2'/>
-            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='compErr'>{compError}</div>
+            <input type="text" placeholder='Please type your Completion Year...' className='input' id='input2'/>
+            <div className='error' id='compErr'>{compError}</div>
           </div>
           
           <button className='btn' data-aos='flip-right' data-aos-delay='200' onClick={handleSubmit}>Continue</button>

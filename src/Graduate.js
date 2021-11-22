@@ -220,26 +220,26 @@ const Graduate = () => {
           <div>
             <p>Please Select Your Course</p>
             <Select options={options7} className='select' styles={customStyles} onChange={handleUnderCourse} />
-            <input type="text" placeholder='Please type your Course...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input4'/>
-            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='courseErr'>{courseErr}</div>
+            <input type="text" placeholder='Please type your Course...' className='input' id='input4'/>
+            <div className='error' id='courseErr'>{courseErr}</div>
           </div>
           <div>
             <p>Please Select Your Course Duration</p>
             <Select options={options4} className='select' styles={customStyles} onChange={handleUnderDuration} />
-            <input type="text" placeholder='Please type your Course Duration...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input5'/>
-            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='durErr'>{durErr}</div>
+            <input type="text" placeholder='Please type your Course Duration...' className='input' id='input5'/>
+            <div className='error' id='durErr'>{durErr}</div>
           </div>
           <div>
             <p>Please Select Your Current Year</p>
             <Select options={options5} className='select' styles={customStyles} onChange={handleUnderCurrent} />
-            <input type="text" placeholder='Please type your Current Year...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input6'/>
-            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='currErr'>{currErr}</div>
+            <input type="text" placeholder='Please type your Current Year...' className='input' id='input6'/>
+            <div className='error' id='currErr'>{currErr}</div>
           </div>
           <div>
             <p>Please Select Your Course Completion Year</p>
             <Select options={options6} className='select' styles={customStyles} onChange={handleUnderCompletion} />
-            <input type="text" placeholder='Please type your Completion Year...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input7'/>
-            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='compErr'>{compErr}</div>
+            <input type="text" placeholder='Please type your Completion Year...' className='input' id='input7'/>
+            <div className='error' id='compErr'>{compErr}</div>
           </div>
           <button className='btn' onClick={handleSubmit}>Continue</button>
         </div>
