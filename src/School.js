@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import Select from 'react-select'
 const options1 = [
     {
-      label: 'Other',
+      label: 'Others',
       value: '0th'
     },
     {
@@ -134,7 +134,15 @@ const options1 = [
   ];
   
 const School = () => {
-    const customStyles = {
+      function customTheme(theme){
+        return {
+          ...theme,
+          colors:{
+            ...theme.colors,
+          },
+        };
+      }
+      const customStyles = {
         control: (base, state) => ({
           ...base,
           color: "#fff",
@@ -154,38 +162,90 @@ const School = () => {
       };
     
       const [classes, setClasses] = useState('')
+      const [stream, setstream] = useState('')
+      const [comp, setcomp] = useState('')
+      const [classErr, setclassErr] = useState('.')
+      const [compError, setcompError] = useState('.')
 
       const handleClass = (e) => {
         setClasses(e.value);
-        console.log(e.value)
-        console.log(classes)
-      }
-    
-      useEffect(() => {
-        if (classes === '11th' || classes === '12th') {
+        setclassErr('.')
+        document.getElementById('classErr').style.display='none'
+        if(e.value==='0th')
+        document.getElementById('input1').style.display='block'
+        else
+        document.getElementById('input1').style.display='none'
+        if (e.value === '11th' || e.value === '12th') {
           document.getElementById('stream-menu').style.display = 'block'
         }
         else {
           document.getElementById('stream-menu').style.display = 'none'
         }
-      }, [classes])    
+      }   
+      const handleCompletion = (e) => {
+        setcomp(e.value)
+        setcompError('.')
+        document.getElementById('compErr').style.display='none'
+        if(e.value==='0th')
+        document.getElementById('input2').style.display='block'
+        else
+        document.getElementById('input2').style.display='none'
+      }
+      const handleStream = (e) => {
+        setstream(e.value)
+        console.log(stream)
+        if(e.value==='0th')
+        document.getElementById('input3').style.display='block'
+        else
+        document.getElementById('input3').style.display='none'
+      }
+      const valid = () => {
+        if(classes==='' || comp===''){
+          if(classes===''){
+            setclassErr('You have not selected your Class');
+            document.getElementById('classErr').style.display='block'
+          }
+          if(comp===''){
+            setcompError('You have not selected your Completion Year');
+            document.getElementById('compErr').style.display='block'
+          }
+          return false
+        }
+        
+        return true;
+      }
+      const handleSubmit=(e)=>{
+        
+        if(valid()){
+        }
+        else{
+          e.preventDefault();
+        }
+      }
     return (
         <div className="school-menu menu" id='school-menu' data-aos='zoom-in'>
 
           <div>
             <p>Please Select Your Class</p>
-            <Select options={options1} className='select' onChange={handleClass} styles={customStyles} />
+            <Select options={options1} className='select' onChange={handleClass} theme={customTheme} styles={customStyles} />
+            <input type="text" placeholder='Please type your Class...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input1'/>
+            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='classErr'>{classErr}</div>
           </div>
 
           <div id='stream-menu'>
             <p>Please Select Your Stream</p>
-            <Select options={options3} className='select' styles={customStyles} />
+            <Select options={options3} className='select' onChange={handleStream} theme={customTheme} styles={customStyles}/>
+            <input type="text" placeholder='Please type your Stream...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input3'/>
           </div>
+
           <div >
             <p>Please Select School Completion Year</p>
-            <Select options={options2} className='select' styles={customStyles} />
+            <Select options={options2} className='select' onChange={handleCompletion} theme={customTheme} styles={customStyles} />
+            <input type="text" placeholder='Please type your Completion Year...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input2'/>
+            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='compErr'>{compError}</div>
           </div>
-          <button className='btn' data-aos='flip-right' data-aos-delay='100'>Continue</button>
+          
+          <button className='btn' data-aos='flip-right' data-aos-delay='200' onClick={handleSubmit}>Continue</button>
         </div>
     )
 }

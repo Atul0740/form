@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Select from 'react-select'
 const options4 = [
     {
@@ -135,25 +135,113 @@ const Graduate = () => {
           borderRadius: "10px",
         })
       };
+
+      const [course, setcourse] = useState('')
+      const [comp, setcomp] = useState('')
+      const [current, setcurrent] = useState('')
+      const [duration, setduration] = useState('')
+      const [courseErr, setcourseErr] = useState('.')
+      const [compErr, setcompErr] = useState('.')
+      const [currErr, setcurrErr] = useState('.')
+      const [durErr, setdurErr] = useState('.')
+
+      const handleUnderCourse = (e) => {
+        setcourse(e.value)
+        setcourseErr('.')
+        document.getElementById('courseErr').style.display='none'
+        if(e.value==='0th')
+        document.getElementById('input4').style.display='block'
+        else
+        document.getElementById('input4').style.display='none'
+      }
+      const handleUnderCompletion = (e) => {
+        setcomp(e.value)
+        setcompErr('.')
+        document.getElementById('compErr').style.display='none'
+        if(e.value==='0th')
+        document.getElementById('input7').style.display='block'
+        else
+        document.getElementById('input7').style.display='none'
+      }
+      const handleUnderCurrent = (e) => {
+        setcurrent(e.value)
+        setcurrErr('.')
+        document.getElementById('currErr').style.display='none'
+        if(e.value==='0th')
+        document.getElementById('input6').style.display='block'
+        else
+        document.getElementById('input6').style.display='none'
+      }
+      const handleUnderDuration = (e) => {
+        setduration(e.value)
+        setdurErr('.')
+        document.getElementById('durErr').style.display='none'
+        if(e.value==='0th')
+        document.getElementById('input5').style.display='block'
+        else
+        document.getElementById('input5').style.display='none'
+      }
+
+      const valid = () => {
+        if(course==='' || comp==='' || duration==='' || current===''){
+          if(course===''){
+            setcourseErr('You have not selected your Course');
+            document.getElementById('courseErr').style.display='block'
+          }
+          if(comp===''){
+            setcompErr('You have not selected your Completion Year');
+            document.getElementById('compErr').style.display='block'
+          }
+          if(duration===''){
+            setdurErr('You have not selected your Course Duration')
+            document.getElementById('durErr').style.display='block'
+          }
+          if(current===''){
+            setcurrErr('You have not selected your Current Year')
+            document.getElementById('currErr').style.display='block'
+          }
+          return false
+        }
+        
+        return true;
+      }
+
+      const handleSubmit=(e)=>{
+        
+        if(valid()){
+        }
+        else{
+          e.preventDefault();
+        }
+      }
+
     return (
         <div className="undergraduate-menu menu" id='ug-menu' data-aos='zoom-in'>
           <div>
             <p>Please Select Your Course</p>
-            <Select options={options7} className='select' styles={customStyles} />
+            <Select options={options7} className='select' styles={customStyles} onChange={handleUnderCourse} />
+            <input type="text" placeholder='Please type your Course...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input4'/>
+            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='courseErr'>{courseErr}</div>
           </div>
           <div>
             <p>Please Select Your Course Duration</p>
-            <Select options={options4} className='select' styles={customStyles} />
+            <Select options={options4} className='select' styles={customStyles} onChange={handleUnderDuration} />
+            <input type="text" placeholder='Please type your Course Duration...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input5'/>
+            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='durErr'>{durErr}</div>
           </div>
           <div>
             <p>Please Select Your Current Year</p>
-            <Select options={options5} className='select' styles={customStyles} />
+            <Select options={options5} className='select' styles={customStyles} onChange={handleUnderCurrent} />
+            <input type="text" placeholder='Please type your Current Year...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input6'/>
+            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='currErr'>{currErr}</div>
           </div>
           <div>
             <p>Please Select Your Course Completion Year</p>
-            <Select options={options6} className='select' styles={customStyles} />
+            <Select options={options6} className='select' styles={customStyles} onChange={handleUnderCompletion} />
+            <input type="text" placeholder='Please type your Completion Year...' style={{marginTop:"0px",width:"100%",marginBottom:"10px",border:"none",height:"35px",borderRadius:"7px",padding:"0px 10px",display:"none",background:"#eee"}} id='input7'/>
+            <div style={{color:"red",fontWeight:"bolder",fontSize:"15px",display:'none'}} id='compErr'>{compErr}</div>
           </div>
-          <button className='btn'>Continue</button>
+          <button className='btn' onClick={handleSubmit}>Continue</button>
         </div>
     )
 }
