@@ -223,7 +223,7 @@ const School = () => {
     }
     if(othersOpen===true){
       if(others===''){
-        setstreamErr('You have not typed your stream');
+        setstreamErr('You have not entered your stream');
         document.getElementById('streamErr').style.display = 'block'
         return false
       }
