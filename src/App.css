@@ -135,8 +135,8 @@ input:focus {
 .error {
     color: red;
     font-weight: bolder;
-    font-size: 15px;
     display: none;
+    width: 350px;
 }
 
 @media(max-width:760px) {
@@ -158,5 +158,9 @@ input:focus {
     }
     .select {
         width: 320px;
+    }
+    .error {
+        width: 320px;
+        font-size: 14px;
     }
 }
